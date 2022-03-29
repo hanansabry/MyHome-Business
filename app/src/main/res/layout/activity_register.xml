@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".presentation.businessowner.RegisterActivity"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/colorAccent2"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logo_white_bg"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Register as business owner"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/editTextBrand"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/corner_light_gray"
+            android:gravity="bottom"
+            android:hint="Brand Name"
+            android:inputType="textPersonName"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/text_gray" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/corner_light_gray"
+            android:gravity="bottom"
+            android:hint="Email"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/text_gray" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/corner_light_gray"
+            android:gravity="bottom"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/text_gray" />
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/corner_light_gray"
+            android:gravity="bottom"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/text_gray" />
+
+        <EditText
+            android:id="@+id/editTextCity"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/corner_light_gray"
+            android:gravity="bottom"
+            android:hint="City"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/text_gray" />
+
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/corner_light_gray"
+            android:gravity="bottom"
+            android:hint="Address"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/text_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="6dp"
+            android:weightSum="6">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/colorAccent2"
+                android:text="Upload banner:"/>
+
+            <EditText
+                android:id="@+id/editTextBannerUri"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:layout_height="56dp"
+                android:background="@drawable/corner_light_gray"
+                android:gravity="bottom"
+                android:layout_gravity="center"
+                android:hint="Banner Uri"
+                android:padding="16dp"
+                android:textSize="14sp"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/text_gray"
+                android:enabled="false"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_upload"
+                android:scaleType="fitCenter"
+                android:background="@null"
+                android:layout_gravity="center"
+                android:foreground="?attr/selectableItemBackground"
+                android:tint="@color/colorAccent2"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnRegister"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/cornered_accent_bg_fill"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textColor="@color/text_gray"/>
+
+            <TextView
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:layout_marginStart="4dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
