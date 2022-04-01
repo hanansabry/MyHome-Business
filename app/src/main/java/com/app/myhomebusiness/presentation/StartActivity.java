@@ -10,6 +10,7 @@ import android.os.Bundle;
 import com.app.myhomebusiness.R;
 import com.app.myhomebusiness.presentation.businessowner.LoginActivity;
 import com.app.myhomebusiness.presentation.businessowner.RegisterActivity;
+import com.app.myhomebusiness.presentation.client.ClientHomeActivity;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -18,6 +19,11 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
         ButterKnife.bind(this);
+    }
+
+    @OnClick(R.id.btnGuest)
+    public void onContinueAsGuestClicked() {
+        startActivity(new Intent(this, ClientHomeActivity.class));
     }
 
     @OnClick(R.id.btnLogin)

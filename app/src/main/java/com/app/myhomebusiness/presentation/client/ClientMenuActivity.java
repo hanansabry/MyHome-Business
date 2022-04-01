@@ -1,37 +1,26 @@
-package com.app.myhomebusiness.presentation.businessowner;
+package com.app.myhomebusiness.presentation.client;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.app.myhomebusiness.R;
 
-public class BusinessDashboard extends AppCompatActivity {
+public class ClientMenuActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_business_dashboard);
+        setContentView(R.layout.activity_client_menu);
         ButterKnife.bind(this);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("Dashboard");
-    }
+        actionBar.setTitle("Items");
 
-    @OnClick(R.id.menuView)
-    public void onMenuViewClicked() {
-        startActivity(new Intent(this, MenuActivity.class));
-    }
-
-    @OnClick(R.id.ordersView)
-    public void onOrdersViewClicked() {
-        startActivity(new Intent(this, OrderDetailsActivity.class));
     }
 
     @Override

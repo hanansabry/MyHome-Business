@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".presentation.businessowner.AddItemActivity"></activity>
+        <activity android:name=".presentation.client.ClientOrderDetailsActivity"></activity>
+        <activity android:name=".presentation.client.ClientMenuActivity" />
+        <activity android:name=".presentation.businessowner.OrderDetailsActivity" />
+        <activity android:name=".presentation.businessowner.OrdersActivity" />
+        <activity android:name=".presentation.client.ClientHomeActivity" />
+        <activity android:name=".presentation.businessowner.AddItemActivity" />
         <activity android:name=".presentation.businessowner.MenuActivity" />
         <activity android:name=".presentation.businessowner.BusinessDashboard" />
         <activity
