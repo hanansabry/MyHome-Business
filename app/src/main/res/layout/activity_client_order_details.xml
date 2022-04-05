@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/default_bg"
     android:orientation="vertical"
     android:weightSum="10"
     tools:context=".presentation.businessowner.OrderDetailsActivity">
@@ -35,7 +35,7 @@
             android:layout_marginTop="4dp"
             app:cardCornerRadius="10dp"
             app:cardMaxElevation="2dp"
-            app:cardBackgroundColor="@color/default_bg">
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -65,7 +65,7 @@
                         android:inputType="phone"
                         android:textColor="@color/colorPrimaryDark"
                         android:hint="Type your phone here"
-                        android:background="@drawable/corner_light_gray"
+                        android:background="@color/white"
                         android:textSize="14sp"/>
 
                 </LinearLayout>
@@ -73,7 +73,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/white"/>
+                    android:background="@color/default_bg"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -97,14 +97,14 @@
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="14sp"
                         android:hint="Type your address"
-                        android:background="@drawable/corner_light_gray"/>
+                        android:background="@color/white"/>
 
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/white"/>
+                    android:background="@color/default_bg"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -129,6 +129,11 @@
                         android:textColor="@color/colorPrimaryDark"/>
 
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/default_bg"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -167,12 +172,12 @@
             android:textSize="16sp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginTop="32dp"/>
+            android:layout_marginTop="16dp"/>
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
+            android:layout_margin="8dp"
             android:layout_weight="5.2">
 
             <androidx.recyclerview.widget.RecyclerView

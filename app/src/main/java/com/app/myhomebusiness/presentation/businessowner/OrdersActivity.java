@@ -38,7 +38,7 @@ public class OrdersActivity extends AppCompatActivity implements OrdersAdapter.O
         ButterKnife.bind(this);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("Menu");
+        actionBar.setTitle("Orders");
 
         RetrieveBusinessOrdersViewModel retrieveBusinessOrdersViewModel = new ViewModelProvider(this).get(RetrieveBusinessOrdersViewModel.class);
         retrieveBusinessOrdersViewModel.retrieveOrders();

@@ -6,18 +6,61 @@
     android:background="@color/white"
     tools:context=".presentation.client.ClientHomeActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/businessesRecyclerview"
+    <LinearLayout
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        tools:listitem="@layout/business_item_layout"/>
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        android:weightSum="6">
+
+        <EditText
+            android:id="@+id/searchEdiText"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:layout_margin="4dp"
+            android:layout_weight="4.5"
+            android:inputType="phone"
+            android:background="@drawable/corner_light_gray"
+            android:hint="Search for your order by phone"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/searchButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1.5"
+            android:background="@drawable/cornered_accent_bg_fill"
+            android:drawableEnd="@drawable/ic_search"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="8dp"
+            android:text="Search"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:indeterminateTint="@color/colorAccent2"/>
+        android:indeterminateTint="@color/colorAccent2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/businessesRecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchView"
+        tools:listitem="@layout/business_item_layout" />
 
 </RelativeLayout>

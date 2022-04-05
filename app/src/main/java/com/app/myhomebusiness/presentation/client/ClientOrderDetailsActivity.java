@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -49,6 +50,8 @@ public class ClientOrderDetailsActivity extends AppCompatActivity {
     TextView orderStatusTextView;
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
+    @BindView(R.id.btnDone)
+    Button btnDone;
     private ArrayList<OrderItem> orderItems;
     private String businessId;
     private PlaceNewOrderViewModel placeNewOrderViewModel;
@@ -62,11 +65,28 @@ public class ClientOrderDetailsActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("Order details");
+
         Intent intent = getIntent();
-        businessId = intent.getStringExtra(Constants.BUSINESS_ID);
-        orderItems = intent.getParcelableArrayListExtra(Constants.ORDER_ITEMS);
-        orderPriceTextView.setText(String.format("%s", getOrderTotalPrice(orderItems)));
-        orderStatusTextView.setText(Constants.STATUS_NEW);
+        if (intent.getStringExtra(Constants.PHONE) != null) {
+            orderItems = intent.getParcelableArrayListExtra(Constants.ORDER_ITEMS);
+
+            orderPhoneEditText.setEnabled(false);
+            orderPhoneEditText.setText(intent.getStringExtra(Constants.PHONE));
+
+            orderAddressEditText.setEnabled(false);
+            orderAddressEditText.setText(intent.getStringExtra(Constants.ADDRESS));
+
+            orderPriceTextView.setText(String.format("%.2f", intent.getDoubleExtra(Constants.PRICE, 0)));
+            orderStatusTextView.setText(intent.getStringExtra(Constants.STATUS));
+
+            btnDone.setBackgroundColor(getResources().getColor(R.color.text_gray));
+            btnDone.setEnabled(false);
+        } else {
+            businessId = intent.getStringExtra(Constants.BUSINESS_ID);
+            orderItems = intent.getParcelableArrayListExtra(Constants.ORDER_ITEMS);
+            orderPriceTextView.setText(String.format("%s", getOrderTotalPrice(orderItems)));
+            orderStatusTextView.setText(Constants.STATUS_NEW);
+        }
         initiateOrderItemsRecyclerView(orderItems);
 
         pd = new ProgressDialog(this);
@@ -118,7 +138,7 @@ public class ClientOrderDetailsActivity extends AppCompatActivity {
             businessOrder.setAddress(address);
             businessOrder.setStatus(Constants.STATUS_NEW);
             businessOrder.setTotalPrice(getOrderTotalPrice(orderItems));
-            businessOrder.setOrderItems(createHashMapFromOrderItemsList(orderItems));
+            businessOrder.setOrderItems(orderItems);
             //place the order
             placeNewOrderViewModel.placeNewOrder(businessId, businessOrder);
             pd.show();

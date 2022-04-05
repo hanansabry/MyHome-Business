@@ -11,4 +11,9 @@ public class Constants {
     public static final String STATUS_DELIVERED = "delivered";
     public static final String ORDERS_NODE = "orders";
     public static final String ORDER_ID = "order_id";
+    public static final String BUSINESS_ORDER = "business_order";
+    public static final String PHONE = "phone";
+    public static final String ADDRESS = "address";
+    public static final String PRICE = "price";
+    public static final String STATUS = "status";
 }

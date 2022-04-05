@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/default_bg"
     android:orientation="vertical"
     android:weightSum="10"
     tools:context=".presentation.businessowner.OrderDetailsActivity">
@@ -35,7 +35,7 @@
             android:layout_marginTop="4dp"
             app:cardCornerRadius="10dp"
             app:cardMaxElevation="2dp"
-            app:cardBackgroundColor="@color/transparent_gray">
+            app:cardBackgroundColor="@color/white">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -62,7 +62,6 @@
                         android:layout_weight="2"
                         android:textAlignment="viewStart"
                         android:textColor="@color/colorPrimaryDark"
-                        android:text="546846546545we"
                         android:textSize="14sp"/>
 
                 </LinearLayout>
@@ -70,7 +69,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/white"/>
+                    android:background="@color/default_bg"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -92,16 +91,14 @@
                         android:layout_weight="2"
                         android:textAlignment="viewStart"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="14sp"
-                        android:text="23/3/2022"
-                        android:background="@color/transparent_gray"/>
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:background="@color/white"/>
+                    android:background="@color/default_bg"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -123,10 +120,14 @@
                         android:layout_weight="2"
                         android:textAlignment="viewStart"
                         android:textSize="14sp"
-                        android:text="25.35 LE"
                         android:textColor="@color/colorPrimaryDark"/>
 
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/default_bg"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -148,10 +149,14 @@
                         android:layout_weight="2"
                         android:textAlignment="viewStart"
                         android:textSize="14sp"
-                        android:text="01014736447"
                         android:textColor="@color/colorPrimaryDark"/>
 
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/default_bg"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -173,7 +178,6 @@
                         android:layout_weight="2"
                         android:textAlignment="viewStart"
                         android:textSize="14sp"
-                        android:text="new"
                         android:textColor="@color/colorPrimaryDark"/>
 
                 </LinearLayout>
@@ -190,30 +194,66 @@
             android:textSize="16sp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginTop="32dp"/>
+            android:layout_marginTop="16dp"/>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/itemsRecyclerView"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="8dp"
-            android:layout_weight="5.2"
-            tools:listitem="@layout/order_item_details_layout" />
+            android:layout_margin="8dp"
+            android:layout_weight="5.2">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/itemsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/order_item_details_layout" />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/colorAccent2"/>
+
+        </FrameLayout>
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnDone"
-        style="@style/Widget.AppCompat.Button.Borderless"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight=".8"
-        android:background="@color/colorAccent2"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:text="Done"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnDelivered"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Deliver Order"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnPending"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Prepare Order"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </LinearLayout>
