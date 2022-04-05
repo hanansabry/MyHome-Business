@@ -8,9 +8,12 @@ import butterknife.OnClick;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import com.app.myhomebusiness.R;
+import com.app.myhomebusiness.presentation.StartActivity;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class BusinessDashboard extends AppCompatActivity {
 
@@ -35,10 +38,22 @@ public class BusinessDashboard extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.dashboard_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 onBackPressed();
+                return true;
+            case R.id.logoutAction:
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(this, StartActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
                 return true;
         }
         return super.onOptionsItemSelected(item);

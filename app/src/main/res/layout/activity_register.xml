@@ -37,7 +37,7 @@
             android:textColor="@color/colorPrimary" />
 
         <EditText
-            android:id="@+id/editTextBrand"
+            android:id="@+id/editTextBusiness"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginStart="24dp"
@@ -45,7 +45,7 @@
             android:layout_marginTop="16dp"
             android:background="@drawable/corner_light_gray"
             android:gravity="bottom"
-            android:hint="Brand Name"
+            android:hint="Business Name"
             android:inputType="textPersonName"
             android:padding="16dp"
             android:textSize="14sp"
@@ -129,50 +129,70 @@
             android:textColor="@color/colorPrimary"
             android:textColorHint="@color/text_gray" />
 
-        <LinearLayout
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:layout_marginEnd="24dp"-->
+<!--            android:layout_marginTop="6dp"-->
+<!--            android:weightSum="6">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:textColor="@color/colorAccent2"-->
+<!--                android:text="Upload banner:"/>-->
+
+<!--            <EditText-->
+<!--                android:id="@+id/editTextBannerUri"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="4"-->
+<!--                android:layout_height="56dp"-->
+<!--                android:background="@drawable/corner_light_gray"-->
+<!--                android:gravity="bottom"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:hint="Banner Uri"-->
+<!--                android:text="https://www.tempdomain.com/image/23.jpg"-->
+<!--                android:padding="16dp"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textColor="@color/colorPrimary"-->
+<!--                android:textColorHint="@color/text_gray"-->
+<!--                android:enabled="false"/>-->
+
+<!--            <ImageButton-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_height="32dp"-->
+<!--                android:src="@drawable/ic_upload"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:background="@null"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:foreground="?attr/selectableItemBackground"-->
+<!--                android:tint="@color/colorAccent2"/>-->
+
+<!--        </LinearLayout>-->
+
+        <EditText
+            android:id="@+id/editTextBannerUri"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_height="60dp"
             android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
             android:layout_marginTop="6dp"
-            android:weightSum="6">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textColor="@color/colorAccent2"
-                android:text="Upload banner:"/>
-
-            <EditText
-                android:id="@+id/editTextBannerUri"
-                android:layout_width="0dp"
-                android:layout_weight="4"
-                android:layout_height="56dp"
-                android:background="@drawable/corner_light_gray"
-                android:gravity="bottom"
-                android:layout_gravity="center"
-                android:hint="Banner Uri"
-                android:padding="16dp"
-                android:textSize="14sp"
-                android:textColor="@color/colorPrimary"
-                android:textColorHint="@color/text_gray"
-                android:enabled="false"/>
-
-            <ImageButton
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="32dp"
-                android:src="@drawable/ic_upload"
-                android:scaleType="fitCenter"
-                android:background="@null"
-                android:layout_gravity="center"
-                android:foreground="?attr/selectableItemBackground"
-                android:tint="@color/colorAccent2"/>
-
-        </LinearLayout>
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/corner_light_gray"
+            android:drawableEnd="@drawable/ic_upload"
+            android:drawableTint="@color/colorAccent2"
+            android:editable="false"
+            android:ellipsize="end"
+            android:focusedByDefault="true"
+            android:hint="Upload photo"
+            android:padding="16dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/text_gray"
+            android:textSize="14sp" />
 
         <Button
             android:id="@+id/btnRegister"
@@ -183,6 +203,7 @@
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
             android:background="@drawable/cornered_accent_bg_fill"
+            android:foreground="?attr/selectableItemBackground"
             android:text="Register"
             android:textAllCaps="false"
             android:textStyle="bold"

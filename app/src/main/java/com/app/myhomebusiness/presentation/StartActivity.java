@@ -8,9 +8,12 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.app.myhomebusiness.R;
+import com.app.myhomebusiness.presentation.businessowner.BusinessDashboard;
 import com.app.myhomebusiness.presentation.businessowner.LoginActivity;
 import com.app.myhomebusiness.presentation.businessowner.RegisterActivity;
 import com.app.myhomebusiness.presentation.client.ClientHomeActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -28,7 +31,12 @@ public class StartActivity extends AppCompatActivity {
 
     @OnClick(R.id.btnLogin)
     public void onLoginClicked() {
-        startActivity(new Intent(this, LoginActivity.class));
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser != null) {
+            startActivity(new Intent(this, BusinessDashboard.class));
+        } else {
+            startActivity(new Intent(this, LoginActivity.class));
+        }
     }
 
     @OnClick(R.id.btnRegister)

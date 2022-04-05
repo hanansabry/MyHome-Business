@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "631581752840",
+    "firebase_url": "https://my-home-business-46ed0-default-rtdb.firebaseio.com",
+    "project_id": "my-home-business-46ed0",
+    "storage_bucket": "my-home-business-46ed0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631581752840:android:7ddbf525d08836ec0a9bbd",
+        "android_client_info": {
+          "package_name": "com.app.myhomebusiness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "631581752840-mlfnakci3c8vd19a8e60dis80j1ciuhc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSeHWjrgIb5o1aKiCeNqRNEdhYvYck8QU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "631581752840-mlfnakci3c8vd19a8e60dis80j1ciuhc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
