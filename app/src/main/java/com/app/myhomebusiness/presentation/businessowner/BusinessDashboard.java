@@ -34,7 +34,7 @@ public class BusinessDashboard extends AppCompatActivity {
 
     @OnClick(R.id.ordersView)
     public void onOrdersViewClicked() {
-        startActivity(new Intent(this, OrderDetailsActivity.class));
+        startActivity(new Intent(this, OrdersActivity.class));
     }
 
     @Override

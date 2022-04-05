@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginEnd="16dp"
-    android:layout_marginStart="16dp"
+
     app:cardCornerRadius="10dp"
     app:cardElevation="1dp"
     android:background="@color/white">
@@ -124,6 +122,7 @@
             app:layout_constraintTop_toBottomOf="@id/order_phone_textview" />
 
         <Button
+            android:id="@+id/orderDetailsButton"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="32dp"

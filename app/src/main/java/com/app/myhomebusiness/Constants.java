@@ -10,4 +10,5 @@ public class Constants {
     public static final String STATUS_PENDING = "pending";
     public static final String STATUS_DELIVERED = "delivered";
     public static final String ORDERS_NODE = "orders";
+    public static final String ORDER_ID = "order_id";
 }

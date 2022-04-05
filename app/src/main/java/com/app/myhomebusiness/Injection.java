@@ -13,6 +13,7 @@ import com.app.myhomebusiness.domain.usecases.PlaceNewOrderUseCase;
 import com.app.myhomebusiness.domain.usecases.RegisterUseCase;
 import com.app.myhomebusiness.domain.usecases.RetrieveBusinessesUseCase;
 import com.app.myhomebusiness.domain.usecases.RetrieveMenuItemsUseCase;
+import com.app.myhomebusiness.domain.usecases.RetrieveOrdersUseCase;
 
 public class Injection {
     public static LoginUseCase getLoginUseCase() {
@@ -54,5 +55,9 @@ public class Injection {
 
     private static BusinessOrdersRepository getBusinessOrdersRepository() {
         return new BusinessOrdersRepositoryImpl();
+    }
+
+    public static RetrieveOrdersUseCase getRetrieveOrdersUseCase() {
+        return new RetrieveOrdersUseCase(getBusinessOrdersRepository());
     }
 }

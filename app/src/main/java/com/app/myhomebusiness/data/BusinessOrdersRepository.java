@@ -8,7 +8,7 @@ import androidx.lifecycle.MutableLiveData;
 
 public interface BusinessOrdersRepository {
 
-    void retrieveAllOrders(MutableLiveData<List<BusinessOrder>> businessOrdersLiveData);
+    void retrieveAllOrdersForCurrentBusiness(MutableLiveData<List<BusinessOrder>> businessOrdersLiveData);
 
     void placeNewOrder(String businessId, BusinessOrder businessOrder, MutableLiveData<Boolean> success);
 
