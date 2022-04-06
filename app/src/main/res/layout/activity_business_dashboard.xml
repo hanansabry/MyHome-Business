@@ -25,7 +25,7 @@
             android:layout_width="0dp"
             android:layout_weight="2"
             android:layout_height="200dp"
-            android:src="@drawable/logo_white_bg"/>
+            android:src="@drawable/menu_icon_colored"/>
 
         <LinearLayout
             android:layout_width="0dp"
@@ -78,7 +78,7 @@
             android:layout_width="0dp"
             android:layout_weight="2"
             android:layout_height="200dp"
-            android:src="@drawable/logo_white_bg"/>
+            android:src="@drawable/orders_icon_orange"/>
 
         <LinearLayout
             android:layout_width="0dp"
